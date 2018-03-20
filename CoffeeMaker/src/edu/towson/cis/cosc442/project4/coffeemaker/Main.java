@@ -1,3 +1,4 @@
+// $codepro.audit.disable variableShouldBeFinal
 package edu.towson.cis.cosc442.project4.coffeemaker;
 
 import java.io.BufferedReader;
@@ -58,7 +59,7 @@ public class Main {
 	    }
 	    
 	    //Read in amt sugar
-	    String sugarString = inputOutput(System.getProperty("line.separator") + "Please enter the units of sugar in the recipe: ");
+	    final String sugarString = inputOutput(System.getProperty("line.separator") + "Please enter the units of sugar in the recipe: ");
 	    int amtSugar = stringToInt(sugarString);
 	    if(amtSugar < 0) {
 	    	mainMenu();

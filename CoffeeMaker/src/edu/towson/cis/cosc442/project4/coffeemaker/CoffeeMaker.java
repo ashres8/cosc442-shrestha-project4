@@ -1,3 +1,4 @@
+// $codepro.audit.disable variableShouldBeFinal
 package edu.towson.cis.cosc442.project4.coffeemaker;
 /**
  * CoffeeMaker object
@@ -79,7 +80,7 @@ public class CoffeeMaker {
         if(r != null) {
 	        for(int i = 0; i < NUM_RECIPES; i++) {
 	            if(r.equals(recipeArray[i])) {
-	                recipeArray[i] = recipeArray[i]; 
+	                recipeArray[i] = new Recipe(); 
 	                canDeleteRecipe = true;
 	            }
 	        }
