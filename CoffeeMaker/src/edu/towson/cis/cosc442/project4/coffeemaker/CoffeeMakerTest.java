@@ -143,7 +143,6 @@ public class CoffeeMakerTest extends TestCase {
 	 * @throws Exception
 	 *
 	 * @generatedBy CodePro at 3/22/18 5:10 PM
-	 */
 	@Test
 	public void testAddInventory_2()
 		throws Exception {
@@ -158,6 +157,7 @@ public class CoffeeMakerTest extends TestCase {
 		// add additional test code here
 		assertEquals(true, result);
 	}
+	 */
 
 	/**
 	 * Run the boolean addInventory(int,int,int,int) method test.
