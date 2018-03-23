@@ -70,6 +70,32 @@ public class InventoryTest {
 		// add additional test code here
 		assertEquals(true, result);
 	}
+	
+	/**
+	 * Run the boolean enoughIngredients(Recipe) method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/22/18 6:56 PM
+	 */
+	@Test
+	public void testEnoughIngredients_3()
+		throws Exception {
+		Inventory fixture = new Inventory();
+
+		Recipe r2 = new Recipe();
+		r2.setName("Coffee 2");
+		r2.setPrice(50);
+		r2.setAmtCoffee(15);
+		r2.setAmtMilk(15);
+		r2.setAmtSugar(15);
+		r2.setAmtChocolate(15); 
+
+		boolean result = fixture.enoughIngredients(r2);
+
+		// add additional test code here
+		assertEquals(true, result);
+	}
 
 	/**
 	 * Run the int getChocolate() method test.
@@ -159,6 +185,7 @@ public class InventoryTest {
 		fixture.setChocolate(chocolate);
 
 		// add additional test code here
+		assertEquals(0, fixture.getChocolate());
 	}
 
 	/**
@@ -177,6 +204,7 @@ public class InventoryTest {
 		fixture.setChocolate(chocolate);
 
 		// add additional test code here
+		assertEquals(1, fixture.getChocolate());
 	}
 
 	/**
@@ -195,6 +223,7 @@ public class InventoryTest {
 		fixture.setCoffee(coffee);
 
 		// add additional test code here
+		assertEquals(0, fixture.getCoffee());
 	}
 
 	/**
@@ -213,8 +242,9 @@ public class InventoryTest {
 		fixture.setCoffee(coffee);
 
 		// add additional test code here
+		assertEquals(1, fixture.getCoffee());
 	}
-
+	
 	/**
 	 * Run the void setMilk(int) method test.
 	 *
@@ -231,6 +261,7 @@ public class InventoryTest {
 		fixture.setMilk(milk);
 
 		// add additional test code here
+		assertEquals(0, fixture.getMilk());
 	}
 
 	/**
@@ -249,6 +280,7 @@ public class InventoryTest {
 		fixture.setMilk(milk);
 
 		// add additional test code here
+		assertEquals(1, fixture.getMilk());
 	}
 
 	/**
@@ -267,6 +299,7 @@ public class InventoryTest {
 		fixture.setSugar(sugar);
 
 		// add additional test code here
+		assertEquals(0, fixture.getSugar());
 	}
 
 	/**
@@ -285,6 +318,7 @@ public class InventoryTest {
 		fixture.setSugar(sugar);
 
 		// add additional test code here
+		assertEquals(1, fixture.getSugar());
 	}
 
 	/**

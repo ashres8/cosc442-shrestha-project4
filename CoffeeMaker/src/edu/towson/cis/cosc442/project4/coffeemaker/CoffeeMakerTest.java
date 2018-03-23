@@ -248,6 +248,56 @@ public class CoffeeMakerTest extends TestCase {
 	}
 	
 	/**
+	 * Run the boolean addInventory(int,int,int,int) method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/22/18 5:10 PM
+	 */
+	@Test
+	public void testAddInventory_7()
+		throws Exception {
+		CoffeeMaker fixture = new CoffeeMaker();
+		int amtCoffee = 0;
+		int amtMilk = 0;
+		int amtSugar = 0;
+		int amtChocolate = 0;
+
+		boolean result = fixture.addInventory(amtCoffee, amtMilk, amtSugar, amtChocolate);
+
+		// add additional test code here
+		assertEquals(true, result);
+	}
+	
+	/**
+	 * Run the boolean addInventory(int,int,int,int) method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/22/18 5:10 PM
+	 */
+	@Test
+	public void testAddInventory_8()
+		throws Exception {
+		CoffeeMaker fixture = new CoffeeMaker();
+		int amtCoffee = 1;
+		int amtMilk = 1;
+		int amtSugar = -1;
+		int amtChocolate = 1;
+
+		boolean result = fixture.addInventory(amtCoffee, amtMilk, amtSugar, amtChocolate);
+
+		Inventory i = fixture.checkInventory();
+		
+		// add additional test code here
+		assertEquals(true, (i.getChocolate() == 15 + amtChocolate) && 
+				(i.getCoffee() == 15 + amtCoffee) &&
+				(i.getMilk() == 15 + amtMilk) &&
+				(i.getSugar() == 15 + amtSugar));
+	}
+	
+	
+	/**
 	 * Run the Inventory checkInventory() method test.
 	 *
 	 * @throws Exception
@@ -385,6 +435,38 @@ public class CoffeeMakerTest extends TestCase {
 
 		// add additional test code here
 		assertEquals(40, result);
+	}
+	
+	/**
+	 * Run the int makeCoffee(Recipe,int) method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/22/18 5:10 PM
+	 */
+	@Test
+	public void testMakeCoffee_4()
+			throws Exception {
+		CoffeeMaker fixture = new CoffeeMaker();
+		int amtPaid = 50;
+
+		Recipe r2 = new Recipe();
+		r2.setName("Coffee 2");
+		r2.setPrice(50);
+		r2.setAmtCoffee(1);
+		r2.setAmtMilk(1);
+		r2.setAmtSugar(1);
+		r2.setAmtChocolate(1); 
+		
+		int result = fixture.makeCoffee(r2, amtPaid);
+
+		Inventory i = fixture.checkInventory();
+		
+		// add additional test code here
+		assertEquals(true, (i.getChocolate() == 15 - 1) && 
+				(i.getCoffee() == 15 - 1) &&
+				(i.getMilk() == 15 - 1) &&
+				(i.getSugar() == 15 - 1));
 	}
 	
 	/**

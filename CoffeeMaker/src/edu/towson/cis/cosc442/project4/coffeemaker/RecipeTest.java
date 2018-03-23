@@ -22,7 +22,7 @@ public class RecipeTest {
 	public void testEquals_1()
 		throws Exception {
 		Recipe fixture = new Recipe();
-		fixture.setName((String) null);
+		fixture.setName(null);
 		Recipe r = new Recipe();
 
 		boolean result = fixture.equals(r);
@@ -62,8 +62,30 @@ public class RecipeTest {
 	public void testEquals_3()
 		throws Exception {
 		Recipe fixture = new Recipe();
-		fixture.setName("");
+		fixture.setName(null);
 		Recipe r = new Recipe();
+		r.setName("A");
+
+		boolean result = fixture.equals(r);
+
+		// add additional test code here
+		assertEquals(false, result);
+	}
+	
+	/**
+	 * Run the boolean equals(Recipe) method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 3/22/18 6:56 PM
+	 */
+	@Test
+	public void testEquals_4()
+		throws Exception {
+		Recipe fixture = new Recipe();
+		fixture.setName("Potato");
+		Recipe r = new Recipe();
+		r.setName("potato");
 
 		boolean result = fixture.equals(r);
 
